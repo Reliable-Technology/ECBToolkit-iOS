@@ -10,6 +10,8 @@
 		FB01DEC71BE4070000E240E7 /* ECBToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB01DEC61BE4070000E240E7 /* ECBToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB01DECE1BE4070000E240E7 /* ECBToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB01DEC31BE4070000E240E7 /* ECBToolkit.framework */; };
 		FB01DED31BE4070000E240E7 /* ECBToolkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB01DED21BE4070000E240E7 /* ECBToolkitTests.m */; };
+		FB01DEDF1BE407E800E240E7 /* ECBConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = FB01DEDD1BE407E800E240E7 /* ECBConstants.h */; };
+		FB01DEE01BE407E800E240E7 /* ECBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FB01DEDE1BE407E800E240E7 /* ECBConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		FB01DECD1BE4070000E240E7 /* ECBToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECBToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB01DED21BE4070000E240E7 /* ECBToolkitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECBToolkitTests.m; sourceTree = "<group>"; };
 		FB01DED41BE4070000E240E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB01DEDD1BE407E800E240E7 /* ECBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBConstants.h; sourceTree = "<group>"; };
+		FB01DEDE1BE407E800E240E7 /* ECBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				FB01DEC61BE4070000E240E7 /* ECBToolkit.h */,
 				FB01DEC81BE4070000E240E7 /* Info.plist */,
+				FB01DEDD1BE407E800E240E7 /* ECBConstants.h */,
+				FB01DEDE1BE407E800E240E7 /* ECBConstants.m */,
 			);
 			path = ECBToolkit;
 			sourceTree = "<group>";
@@ -94,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB01DEC71BE4070000E240E7 /* ECBToolkit.h in Headers */,
+				FB01DEDF1BE407E800E240E7 /* ECBConstants.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB01DEE01BE407E800E240E7 /* ECBConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
