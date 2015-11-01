@@ -20,8 +20,9 @@ Pod::Spec.new do |s|
 
   s.requires_arc        = true
 
-  s.source_files        = 'ECBToolkit/*.{h,m}'
-  #s.resources           = 'ECBToolkit/Resources/*'
+  s.source_files        = 'ECBToolkit/*.{h,m}',
+                          'ECBToolkit/Internal/**/*.{h,m}'
+  #s.resources          = 'ECBToolkit/Resources/*'
 
   s.ios.frameworks      = 'AudioToolbox',
                           'CFNetwork',
