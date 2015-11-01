@@ -15,7 +15,7 @@
 /// @name Version
 ///--------------------------------------
 
-#define SDK_VERSION @"0.1.0"
+#define API_VERSION @"0.1.0"
 
 ///--------------------------------------
 /// @name Cache Policies

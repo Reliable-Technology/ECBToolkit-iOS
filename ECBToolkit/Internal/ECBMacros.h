@@ -38,7 +38,8 @@ __strong __typeof__(var) var = ## _weak;
 /// @name KVC
 ///--------------------------------------
 
-/*! This macro ensures that object.key exists at compile time.
+/*! 
+ This macro ensures that object.key exists at compile time.
  It can accept a chained key path.
  */
 #define keypath(TYPE, PATH) \
@@ -48,7 +49,8 @@ __strong __typeof__(var) var = ## _weak;
 /// @name Runtime
 ///-------------------------------------
 
-/*! The objc_msgSend_safe macro ensures that we properly cast the function call
+/*! 
+ The objc_msgSend_safe macro ensures that we properly cast the function call
  to use the right conventions when passing parameters and getting return values.
  This also fixes somes issues with ARC and objc_msgSend directly, through strange
  things can happen when receiving values from NS_RETURNS_RETAINED method.
@@ -56,7 +58,8 @@ __strong __typeof__(var) var = ## _weak;
 #define objc_msgSend(...) _Pragma("GCC error \"Use objc_msgSend_safe() instead!\"")
 #define objc_msgSend_safe(returnType, argTypes...) ((returnType (*)(id, SEL, ##argTypes))(objc_msgSend))
 
-/*! This simply wraps dispatch_sync and properly throws the exception back to the calling
+/*! 
+ This simply wraps dispatch_sync and properly throws the exception back to the calling
  thread, not the thread that the exception was originally raised on.
  
  @param queue The queue to execute on
@@ -77,7 +80,8 @@ __strong __typeof__(var) var = ## _weak;
         if (caught) @throw caught;          \
     } while (0)                             \
 
-/*! To prevent retain cycles by OCMock, this macro allows us to capture a weak reference
+/*! 
+ To prevent retain cycles by OCMock, this macro allows us to capture a weak reference
  to return from a stubbed method.
  */
 #define andReturnWeak(variable) _andDo(                                                     \

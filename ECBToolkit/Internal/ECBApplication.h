@@ -13,7 +13,7 @@
 
 /*!
  `ECBApplication` class provides a centralized way to get the information about the current application,
- or the environment it's running in. Please non, that all device specific things - should go to <ECBDevice>
+ or the environment it's running in. Please note, that all device specific things - should go to <ECBDevice>
  */
 @interface ECBApplication : NSObject
 

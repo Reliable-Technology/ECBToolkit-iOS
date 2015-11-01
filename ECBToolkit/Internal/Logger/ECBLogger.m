@@ -75,7 +75,7 @@
 - (instancetype)init
 {
     self = [super init];
-    if (!self) return nil;
+    if (self == nil) return nil;
 
     _logLevel = ([ECBApplication currentApplication].appStoreEnvironment ? ECBLogLevelNone : ECBLogLevelWarning);
     

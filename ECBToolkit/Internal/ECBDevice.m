@@ -54,7 +54,7 @@ static NSString *DeviceSysctlByName(NSString *name)
 - (NSString *)detailedModel
 {
     NSString *name = DeviceSysctlByName(@"hw.machine");
-    if (!name)
+    if (name != nil)
     {
         name = [UIDevice currentDevice].model;
     }
