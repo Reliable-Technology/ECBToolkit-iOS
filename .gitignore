@@ -1,0 +1,13 @@
+.DS_Store
+
+*.xcodeproj/xcuserdata/*.scuserdatad
+
+*.xccheckout
+*.xcscmblueprint
+*.xcuserdatad
+
+Pods
+Podfile.lock
+
+DerivedData
+build

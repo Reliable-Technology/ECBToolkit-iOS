@@ -14,14 +14,12 @@
 ///--------------------------------------
 /// @name Version
 ///--------------------------------------
-#pragma mark - Version
 
 #define SDK_VERSION @"0.1.0"
 
 ///--------------------------------------
 /// @name Cache Policies
 ///--------------------------------------
-#pragma mark - Cache Policies
 
 /*!
  `ECBCachePolicy` specifies different caching policies.
@@ -70,7 +68,6 @@ typedef NS_ENUM(uint8_t, ECBCachePolicy)
 ///--------------------------------------
 /// @name Logging Levels
 ///--------------------------------------
-#pragma mark - Logging Levels
 
 /*!
  `ECBLogLevel` enum specifies different levels of logging that could be used to limit or display more messages in logs.
@@ -111,7 +108,6 @@ typedef NS_ENUM(uint8_t, ECBLogLevel)
 ///--------------------------------------
 /// @name Errors
 ///--------------------------------------
-#pragma mark - Errors
 
 extern NSString *const __nonnull ECBErrorDomain;
 
@@ -131,7 +127,6 @@ typedef NS_ENUM(NSInteger, ECBErrorCode)
 ///--------------------------------------
 /// @name Blocks
 ///--------------------------------------
-#pragma mark - Blocks
 
 typedef void (^ECBBooleanResultBlock)(BOOL succeeded, NSError *__nullable error);
 typedef void (^ECBIntegerResultBlock)(int number, NSError *__nullable error);
@@ -148,7 +143,6 @@ typedef void (^ECBProgressBlock)(int percentDone);
 ///--------------------------------------
 /// @name Deprecated Macros
 ///--------------------------------------
-#pragma mark - Deprecated Macros
 
 #ifndef ECB_DEPRECATED
 #  ifdef __deprecated_msg
