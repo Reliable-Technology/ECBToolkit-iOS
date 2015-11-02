@@ -36,5 +36,6 @@ Pod::Spec.new do |s|
                           'Social'
 
   s.dependency 'AFNetworking'
+  s.dependency 'OCMock'
 
 end
