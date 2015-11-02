@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.source_files        = 'ECBToolkit/*.{h,m}',
                           'ECBToolkit/Internal/**/*.{h,m}'
-  #s.resources          = 'ECBToolkit/Resources/*'
+  #s.resources           = 'ECBToolkit/Resources/*'
 
   s.ios.frameworks      = 'AudioToolbox',
                           'CFNetwork',
@@ -34,5 +34,7 @@ Pod::Spec.new do |s|
                           'SystemConfiguration'
   s.ios.weak_frameworks = 'Accounts',
                           'Social'
+
+  s.dependency 'AFNetworking'
 
 end
