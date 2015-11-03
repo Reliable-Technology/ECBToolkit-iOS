@@ -9,6 +9,7 @@
 #import "ECBHTTPURLRequestConstructor.h"
 #import "ECBHTTPRequest.h"
 #import "ECBAssert.h"
+#import "ECBSession.h"
 
 @implementation ECBHTTPURLRequestConstructor
 
@@ -16,7 +17,7 @@
 #pragma mark - Public
 ///--------------------------------------
 
-+ (NSMutableURLRequest *)urlRequestWithURL:(NSURL *)url
++ (NSMutableURLRequest *)urlRequestWithURL:(NSString *)url
                                 httpMethod:(NSString *)httpMethod
                                httpHeaders:(NSDictionary *)httpHeaders
                                 parameters:(NSDictionary *)parameters
@@ -24,10 +25,16 @@
     NSParameterAssert(url != nil);
     NSParameterAssert(httpMethod != nil);
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     
+    // TODO: (tkieu87) Define User Header Fields
+    NSMutableDictionary *allHeaderFields = [NSMutableDictionary dictionary];
+    [allHeaderFields setObject:ECBHeaderNameSessionToken forKey:[ECBSession current].sessionToken];
+    [allHeaderFields setObject:ECBHeaderNameUserId forKey:@""];
+    if (httpHeaders) [allHeaderFields addEntriesFromDictionary:httpHeaders];
+
     request.HTTPMethod = httpMethod;
-    request.allHTTPHeaderFields = httpHeaders;
+    request.allHTTPHeaderFields = allHeaderFields;
     
     if (parameters != nil)
     {
@@ -46,5 +53,7 @@
     }
     return request;
 }
+
+
 
 @end

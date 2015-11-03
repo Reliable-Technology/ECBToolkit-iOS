@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B6D13C3B342BDE17A2DD4FA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E21763144CCC77BE8BE9374 /* libPods.a */; };
+		51BCF22C7F66F152C75886FC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E21763144CCC77BE8BE9374 /* libPods.a */; };
 		FB01DEC71BE4070000E240E7 /* ECBToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB01DEC61BE4070000E240E7 /* ECBToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB01DECE1BE4070000E240E7 /* ECBToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB01DEC31BE4070000E240E7 /* ECBToolkit.framework */; };
 		FB01DED31BE4070000E240E7 /* ECBToolkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB01DED21BE4070000E240E7 /* ECBToolkitTests.m */; };
@@ -25,6 +27,12 @@
 		FB1CFC621BE69D5200792976 /* ECBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1CFC601BE69D5200792976 /* ECBUtils.m */; };
 		FB1CFC6B1BE6FD3D00792976 /* ECBWebClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FB1CFC691BE6FD3D00792976 /* ECBWebClient.h */; };
 		FB1CFC6C1BE6FD3D00792976 /* ECBWebClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1CFC6A1BE6FD3D00792976 /* ECBWebClient.m */; };
+		FBBEE8101BE80FDD00C26D75 /* ECBRequestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE80E1BE80FDD00C26D75 /* ECBRequestObject.h */; };
+		FBBEE8111BE80FDD00C26D75 /* ECBRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE80F1BE80FDD00C26D75 /* ECBRequestObject.m */; };
+		FBBEE8141BE80FFA00C26D75 /* ECBResponseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE8121BE80FFA00C26D75 /* ECBResponseObject.h */; };
+		FBBEE8151BE80FFA00C26D75 /* ECBResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE8131BE80FFA00C26D75 /* ECBResponseObject.m */; };
+		FBBEE8201BE81E3700C26D75 /* ECBWebCallbackObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE81E1BE81E3700C26D75 /* ECBWebCallbackObject.h */; };
+		FBBEE8211BE81E3700C26D75 /* ECBWebCallbackObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE81F1BE81E3700C26D75 /* ECBWebCallbackObject.m */; };
 		FBF4FC841BE426A000ECF415 /* ECBDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = FBF4FC821BE426A000ECF415 /* ECBDevice.h */; };
 		FBF4FC851BE426A000ECF415 /* ECBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4FC831BE426A000ECF415 /* ECBDevice.m */; };
 /* End PBXBuildFile section */
@@ -40,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E21763144CCC77BE8BE9374 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD5C7441CB0EAC2F722C5A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		85456BB0EE1D28B63C9C15BB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FB01DEC31BE4070000E240E7 /* ECBToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ECBToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB01DEC61BE4070000E240E7 /* ECBToolkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECBToolkit.h; sourceTree = "<group>"; };
 		FB01DECD1BE4070000E240E7 /* ECBToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECBToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +75,12 @@
 		FB1CFC691BE6FD3D00792976 /* ECBWebClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBWebClient.h; sourceTree = "<group>"; };
 		FB1CFC6A1BE6FD3D00792976 /* ECBWebClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBWebClient.m; sourceTree = "<group>"; };
 		FB2BC5C51BE411CF00F3BD6B /* ECBMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECBMacros.h; sourceTree = "<group>"; };
+		FBBEE80E1BE80FDD00C26D75 /* ECBRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBRequestObject.h; sourceTree = "<group>"; };
+		FBBEE80F1BE80FDD00C26D75 /* ECBRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBRequestObject.m; sourceTree = "<group>"; };
+		FBBEE8121BE80FFA00C26D75 /* ECBResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBResponseObject.h; sourceTree = "<group>"; };
+		FBBEE8131BE80FFA00C26D75 /* ECBResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBResponseObject.m; sourceTree = "<group>"; };
+		FBBEE81E1BE81E3700C26D75 /* ECBWebCallbackObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBWebCallbackObject.h; sourceTree = "<group>"; };
+		FBBEE81F1BE81E3700C26D75 /* ECBWebCallbackObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBWebCallbackObject.m; sourceTree = "<group>"; };
 		FBF4FC821BE426A000ECF415 /* ECBDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBDevice.h; sourceTree = "<group>"; };
 		FBF4FC831BE426A000ECF415 /* ECBDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBDevice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BCF22C7F66F152C75886FC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,18 +99,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB01DECE1BE4070000E240E7 /* ECBToolkit.framework in Frameworks */,
+				4B6D13C3B342BDE17A2DD4FA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3919902CEEF7043F76D55440 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85456BB0EE1D28B63C9C15BB /* Pods.debug.xcconfig */,
+				6AD5C7441CB0EAC2F722C5A6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9A4BEEBFD83B606E3C62B72C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E21763144CCC77BE8BE9374 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB01DEB91BE4070000E240E7 = {
 			isa = PBXGroup;
 			children = (
 				FB01DEC51BE4070000E240E7 /* ECBToolkit */,
 				FB01DED11BE4070000E240E7 /* ECBToolkitTests */,
 				FB01DEC41BE4070000E240E7 /* Products */,
+				3919902CEEF7043F76D55440 /* Pods */,
+				9A4BEEBFD83B606E3C62B72C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +179,7 @@
 		FB1CFC481BE6710F00792976 /* HTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
+				FBBEE80D1BE80FD100C26D75 /* Model */,
 				FB1CFC681BE6FD3600792976 /* WebClient */,
 				FB1CFC491BE671C800792976 /* RequestConstructor */,
 			);
@@ -199,6 +238,19 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
+		FBBEE80D1BE80FD100C26D75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEE80E1BE80FDD00C26D75 /* ECBRequestObject.h */,
+				FBBEE80F1BE80FDD00C26D75 /* ECBRequestObject.m */,
+				FBBEE8121BE80FFA00C26D75 /* ECBResponseObject.h */,
+				FBBEE8131BE80FFA00C26D75 /* ECBResponseObject.m */,
+				FBBEE81E1BE81E3700C26D75 /* ECBWebCallbackObject.h */,
+				FBBEE81F1BE81E3700C26D75 /* ECBWebCallbackObject.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -211,9 +263,12 @@
 				FB1CFC4C1BE6740E00792976 /* ECBAssert.h in Headers */,
 				FB1CFC6B1BE6FD3D00792976 /* ECBWebClient.h in Headers */,
 				FBF4FC841BE426A000ECF415 /* ECBDevice.h in Headers */,
+				FBBEE8141BE80FFA00C26D75 /* ECBResponseObject.h in Headers */,
+				FBBEE8201BE81E3700C26D75 /* ECBWebCallbackObject.h in Headers */,
 				FB1CFC461BE5AB0900792976 /* ECBApplication.h in Headers */,
 				FB01DEDF1BE407E800E240E7 /* ECBConstants.h in Headers */,
 				FB1CFC4F1BE6787A00792976 /* ECBHTTPURLRequestConstructor.h in Headers */,
+				FBBEE8101BE80FDD00C26D75 /* ECBRequestObject.h in Headers */,
 				FB1CFC611BE69D5200792976 /* ECBUtils.h in Headers */,
 				FB1CFC401BE55CC400792976 /* ECBLogger.h in Headers */,
 			);
@@ -226,10 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB01DED71BE4070000E240E7 /* Build configuration list for PBXNativeTarget "ECBToolkit" */;
 			buildPhases = (
+				B5BEC353D5F411BC77CB4647 /* Check Pods Manifest.lock */,
 				FB01DEBE1BE4070000E240E7 /* Sources */,
 				FB01DEBF1BE4070000E240E7 /* Frameworks */,
 				FB01DEC01BE4070000E240E7 /* Headers */,
 				FB01DEC11BE4070000E240E7 /* Resources */,
+				2C798BC6886E03831F99C497 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,9 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB01DEDA1BE4070000E240E7 /* Build configuration list for PBXNativeTarget "ECBToolkitTests" */;
 			buildPhases = (
+				46072C91A14136DCCF36114E /* Check Pods Manifest.lock */,
 				FB01DEC91BE4070000E240E7 /* Sources */,
 				FB01DECA1BE4070000E240E7 /* Frameworks */,
 				FB01DECB1BE4070000E240E7 /* Resources */,
+				C93394694005D98093FD3EC1 /* Embed Pods Frameworks */,
+				38B6AE7517530DC09B866E16 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +370,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C798BC6886E03831F99C497 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38B6AE7517530DC09B866E16 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46072C91A14136DCCF36114E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5BEC353D5F411BC77CB4647 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C93394694005D98093FD3EC1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FB01DEBE1BE4070000E240E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -318,10 +456,13 @@
 				FB1CFC6C1BE6FD3D00792976 /* ECBWebClient.m in Sources */,
 				FB1CFC411BE55CC400792976 /* ECBLogger.m in Sources */,
 				FB1CFC621BE69D5200792976 /* ECBUtils.m in Sources */,
+				FBBEE8111BE80FDD00C26D75 /* ECBRequestObject.m in Sources */,
 				FB1CFC501BE6787A00792976 /* ECBHTTPURLRequestConstructor.m in Sources */,
 				FB1CFC471BE5AB0900792976 /* ECBApplication.m in Sources */,
 				FBF4FC851BE426A000ECF415 /* ECBDevice.m in Sources */,
+				FBBEE8211BE81E3700C26D75 /* ECBWebCallbackObject.m in Sources */,
 				FB01DEE01BE407E800E240E7 /* ECBConstants.m in Sources */,
+				FBBEE8151BE80FFA00C26D75 /* ECBResponseObject.m in Sources */,
 				FB1CFC591BE67FAD00792976 /* ECBSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +576,7 @@
 		};
 		FB01DED81BE4070000E240E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85456BB0EE1D28B63C9C15BB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -452,6 +594,7 @@
 		};
 		FB01DED91BE4070000E240E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AD5C7441CB0EAC2F722C5A6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -469,6 +612,7 @@
 		};
 		FB01DEDB1BE4070000E240E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85456BB0EE1D28B63C9C15BB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ECBToolkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -479,6 +623,7 @@
 		};
 		FB01DEDC1BE4070000E240E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AD5C7441CB0EAC2F722C5A6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ECBToolkitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

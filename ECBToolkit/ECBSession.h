@@ -40,11 +40,11 @@ static NSInteger const ECBDefaultHardExpirationMinutes = 72 * 60;
 ///--------------------------------------
 
 /*!
- A shared instance of 'ECBSession' that should be used for all service request.
+ The current `ECBSession` that should be used for all service request.
  
- @returns A shared singleton instance of 'ECBSession'
+ @returns The current `ECBSession`
  */
-+ (instancetype)sharedSession;
++ (instancetype)current;
 
 ///--------------------------------------
 /// @name Session Utilities

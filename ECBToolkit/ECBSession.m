@@ -32,7 +32,7 @@ static NSString * const ECBSessionTokenKey          = @"ECBSessionTokenKey";
 #pragma mark - Init
 ///--------------------------------------
 
-+ (instancetype)sharedSession
++ (instancetype)current
 {
     static ECBSession *session;
     static dispatch_once_t onceToken;
@@ -90,7 +90,7 @@ static NSString * const ECBSessionTokenKey          = @"ECBSessionTokenKey";
             softExpirationMinutes:(NSInteger)softExpirationMinutes
             hardExpirationMinutes:(NSInteger)hardExpirationMinutes
 {
-    ECBParameterAssert([ECBUtils isNotEmptyString:token], @"Token string can't be null or empty");
+    ECBParameterAssert(token, @"Token string can't be null");
     
     _sessionToken = token;
     self._softExpiration = softExpirationMinutes;
@@ -122,7 +122,7 @@ static NSString * const ECBSessionTokenKey          = @"ECBSessionTokenKey";
 
 - (void)extendSession:(NSString *)newToken
 {
-    ECBParameterAssert([ECBUtils isNotEmptyString:newToken], @"Token string can't be null or empty");
+    ECBParameterAssert(newToken, @"Token string can't be null");
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:[NSDate date] forKey:ECBSessionLastCallKey];
@@ -149,7 +149,7 @@ static NSString * const ECBSessionTokenKey          = @"ECBSessionTokenKey";
 
 - (void)clearSession
 {
-    _sessionToken = nil;
+    _sessionToken = @"";
     self._sessionCreated = nil;
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];

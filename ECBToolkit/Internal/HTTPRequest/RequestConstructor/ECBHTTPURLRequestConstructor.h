@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+static NSString * const ECBHeaderNameSessionToken  = @"X-Session-Token";
+static NSString * const ECBHeaderNameUserId        = @"X-User-Id";
+
 @interface ECBHTTPURLRequestConstructor : NSObject
 
 /*!
@@ -18,9 +23,11 @@
  @param httpHeaders HTTP header parameters
  @param parameters  HTTP body parameters
  */
-+ (NSMutableURLRequest *)urlRequestWithURL:(NSURL *)url
-                                httpMethod:(NSString *)httpMethod
-                               httpHeaders:(NSDictionary *)httpHeaders
-                                parameters:(NSDictionary *)parameters;
++ (NSMutableURLRequest *)urlRequestWithURL:(nonnull NSString *)url
+                                httpMethod:(nonnull NSString *)httpMethod
+                               httpHeaders:(nullable NSDictionary *)httpHeaders
+                                parameters:(nullable NSDictionary *)parameters;
+
+NS_ASSUME_NONNULL_END
 
 @end
