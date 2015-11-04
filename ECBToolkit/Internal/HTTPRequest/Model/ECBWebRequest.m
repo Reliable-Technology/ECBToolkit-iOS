@@ -1,14 +1,14 @@
 //
-//  ECBRequestObject.m
+//  ECBWebRequest.m
 //  ECBToolkit
 //
 //  Created by Tony Kieu on 11/2/15.
 //  Copyright © 2015 ECOMBID, INC. All rights reserved.
 //
 
-#import "ECBRequestObject.h"
+#import "ECBWebRequest.h"
 
-@interface ECBRequestObject ()
+@interface ECBWebRequest ()
 
 @property (nonatomic, copy, readwrite) NSString *httpPath;
 @property (nonatomic, copy, readwrite) NSString *httpMethod;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation ECBRequestObject
+@implementation ECBWebRequest
 
 ///--------------------------------------
 #pragma mark - Init
@@ -31,7 +31,7 @@
                              sessionToken:(NSString *)sessionToken
                                    userId:(NSInteger)userId
 {
-    ECBRequestObject *requestObject = [ECBRequestObject new];
+    ECBWebRequest *requestObject = [ECBWebRequest new];
     requestObject.httpPath = path;
     requestObject.httpMethod = method;
     requestObject.parameters = parameters;

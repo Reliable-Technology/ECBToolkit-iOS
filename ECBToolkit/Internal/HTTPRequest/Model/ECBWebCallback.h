@@ -1,5 +1,5 @@
 //
-//  ECBWebCallbackObject.h
+//  ECBWebCallback.h
 //  ECBToolkit
 //
 //  Created by Tony Kieu on 11/2/15.
@@ -10,15 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class ECBResponseObject;
+@class ECBWebReponse;
 
-typedef void (^ECBResponseBlock)(ECBResponseObject *);
+typedef void (^ECBResponseBlock)(ECBWebReponse *);
 
 /*!
- `ECBWebCallbackObject` is a container object which handles the callback block
- for success and failure of case ECBResponseObject.
+ `ECBWebCallback` is a container object which handles the callback block
+ for success and failure of case ECBWebResponse.
  */
-@interface ECBWebCallbackObject : NSObject
+@interface ECBWebCallback : NSObject
 
 @property (nonatomic, readonly) ECBResponseBlock result;
 
@@ -27,11 +27,11 @@ typedef void (^ECBResponseBlock)(ECBResponseObject *);
 ///--------------------------------------
 
 /*!
- Forms a new block callback with `ECBResponseObject`
+ Forms a new block callback with `ECBWebResponse`
  
  @param result The callback block
  
- @returns A new `ECBWebCallbackObject`
+ @returns A new `ECBWebCallback`
  */
 + (instancetype)callbackWithResult:(ECBResponseBlock)result;
 

@@ -1,20 +1,20 @@
 //
-//  ECBWebCallbackObject.m
+//  ECBWebCallback.m
 //  ECBToolkit
 //
 //  Created by Tony Kieu on 11/2/15.
 //  Copyright © 2015 ECOMBID, INC. All rights reserved.
 //
 
-#import "ECBWebCallbackObject.h"
+#import "ECBWebCallback.h"
 
-@interface ECBWebCallbackObject ()
+@interface ECBWebCallback ()
 
 @property (nonatomic, readwrite) ECBResponseBlock result;
 
 @end
 
-@implementation ECBWebCallbackObject
+@implementation ECBWebCallback
 
 ///--------------------------------------
 #pragma mark - Init
@@ -22,7 +22,7 @@
 
 + (instancetype)callbackWithResult:(ECBResponseBlock)result
 {
-    ECBWebCallbackObject *callback = [ECBWebCallbackObject new];
+    ECBWebCallback *callback = [ECBWebCallback new];
     callback.result = result;
     return callback;
 }

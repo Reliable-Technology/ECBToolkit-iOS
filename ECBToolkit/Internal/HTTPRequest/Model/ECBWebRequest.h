@@ -1,5 +1,5 @@
 //
-//  ECBRequestObject.h
+//  ECBWebRequest.h
 //  ECBToolkit
 //
 //  Created by Tony Kieu on 11/2/15.
@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /*!
- `ECBRequestObject` is a container object of all requests to the eComBid-API. It encapsulates
+ `ECBWebRequest` is a container object of all requests to the eComBid-API. It encapsulates
  the request URL and method, associated parameters, and caching mechanism.
  */
-@interface ECBRequestObject : NSObject
+@interface ECBWebRequest : NSObject
 
 /*!
  @abstract Full request path that contains base URL and endpoint
@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///--------------------------------------
 
 /*!
- Creates a new `ECBRequestObject` container object.
+ Creates a new `ECBWebRequest` container object.
  
  @param path            The request url path
  @param method          The request method
@@ -64,12 +64,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param sessionToken    The request session token
  @param userId          The request user Id
  
- @returns A new `ECBRequestObject`
+ @returns A new `ECBWebRequest`
  */
-+ (instancetype)requestObjectWithHTTPPath:(NSString *)path
-                               httpMethod:(NSString *)method
-                               parameters:(NSDictionary *)parameters
-                             sessionToken:(NSString *)sessionToken
++ (instancetype)requestObjectWithHTTPPath:(nonnull NSString *)path
+                               httpMethod:(nonnull NSString *)method
+                               parameters:(nullable NSDictionary *)parameters
+                             sessionToken:(nonnull NSString *)sessionToken
                                    userId:(NSInteger)userId;
 
 @end

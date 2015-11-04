@@ -78,7 +78,7 @@ static NSString *DeviceSysctlByName(NSString *name)
     DIR *dir = opendir("/");
     if (dir != NULL)
     {
-        jailbroken = YES;
+        jailBroken = YES;
         closedir(dir);
     }
 #endif

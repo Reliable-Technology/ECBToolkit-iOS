@@ -10,6 +10,7 @@
 #define ECBLogging_h
 
 #import "ECBLogger.h"
+#import "ECBConstants.h"
 
 static const ECBLoggingTag ECBLoggingTagCommon = 0;
 static const ECBLoggingTag ECBLoggingTagCrashReporting = 100;
@@ -18,16 +19,16 @@ static const ECBLoggingTag ECBLoggingTagCrashReporting = 100;
 [[ECBLogger sharedLogger] logMessageWithLevel:level tag:loggingTag format:(frmt), ##__VA_ARGS__]
 
 #define ECBLogError(tag, frmt, ...) \
-ECBLog(ECBLogLevelError, (tag), (frmt), ##__VA_ARGS__]
+ECBLog(ECBLogLevelError, (tag), (frmt), ##__VA_ARGS__)
 
 #define ECBLogWarning(tag, frmt, ...) \
-ECBLog(ECBLogLevelWarning, (tag), (frmt), ##__VA_ARGS__]
+ECBLog(ECBLogLevelWarning, (tag), (frmt), ##__VA_ARGS__)
 
 #define ECBLogInfo(tag, frmt, ...) \
-ECBLog(ECBLogLevelInfo, (tag), (frmt), ##__VA_ARGS__]
+ECBLog(ECBLogLevelInfo, (tag), (frmt), ##__VA_ARGS__)
 
 #define ECBLogDebug(tag, frmt, ...) \
-ECBLog(ECBLogLevelDebug, (tag), (frmt), ##__VA_ARGS__]
+ECBLog(ECBLogLevelDebug, (tag), (frmt), ##__VA_ARGS__)
 
 #define ECBLogException(exception) \
 ECBLogError(ECBLoggingTagCommon, @"Caught \"%@\" with reason \"%@\"$@", \

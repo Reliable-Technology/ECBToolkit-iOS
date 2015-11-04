@@ -11,7 +11,6 @@
 		51BCF22C7F66F152C75886FC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E21763144CCC77BE8BE9374 /* libPods.a */; };
 		FB01DEC71BE4070000E240E7 /* ECBToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB01DEC61BE4070000E240E7 /* ECBToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB01DECE1BE4070000E240E7 /* ECBToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB01DEC31BE4070000E240E7 /* ECBToolkit.framework */; };
-		FB01DED31BE4070000E240E7 /* ECBToolkitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB01DED21BE4070000E240E7 /* ECBToolkitTests.m */; };
 		FB01DEDF1BE407E800E240E7 /* ECBConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = FB01DEDD1BE407E800E240E7 /* ECBConstants.h */; };
 		FB01DEE01BE407E800E240E7 /* ECBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FB01DEDE1BE407E800E240E7 /* ECBConstants.m */; };
 		FB1CFC401BE55CC400792976 /* ECBLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = FB1CFC3E1BE55CC400792976 /* ECBLogger.h */; };
@@ -27,12 +26,21 @@
 		FB1CFC621BE69D5200792976 /* ECBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1CFC601BE69D5200792976 /* ECBUtils.m */; };
 		FB1CFC6B1BE6FD3D00792976 /* ECBWebClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FB1CFC691BE6FD3D00792976 /* ECBWebClient.h */; };
 		FB1CFC6C1BE6FD3D00792976 /* ECBWebClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1CFC6A1BE6FD3D00792976 /* ECBWebClient.m */; };
-		FBBEE8101BE80FDD00C26D75 /* ECBRequestObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE80E1BE80FDD00C26D75 /* ECBRequestObject.h */; };
-		FBBEE8111BE80FDD00C26D75 /* ECBRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE80F1BE80FDD00C26D75 /* ECBRequestObject.m */; };
-		FBBEE8141BE80FFA00C26D75 /* ECBResponseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE8121BE80FFA00C26D75 /* ECBResponseObject.h */; };
-		FBBEE8151BE80FFA00C26D75 /* ECBResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE8131BE80FFA00C26D75 /* ECBResponseObject.m */; };
-		FBBEE8201BE81E3700C26D75 /* ECBWebCallbackObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE81E1BE81E3700C26D75 /* ECBWebCallbackObject.h */; };
-		FBBEE8211BE81E3700C26D75 /* ECBWebCallbackObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE81F1BE81E3700C26D75 /* ECBWebCallbackObject.m */; };
+		FBBEE8671BEA63C500C26D75 /* ECBTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE8631BEA63C500C26D75 /* ECBTestCase.m */; };
+		FBBEE8681BEA63C500C26D75 /* ECBUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE8651BEA63C500C26D75 /* ECBUserTests.m */; };
+		FBBEE8691BEA63C500C26D75 /* ECBWebClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE8661BEA63C500C26D75 /* ECBWebClientTests.m */; };
+		FBBEE8701BEA63E600C26D75 /* ECBObject.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE86B1BEA63E600C26D75 /* ECBObject.h */; };
+		FBBEE8711BEA63E600C26D75 /* ECBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE86C1BEA63E600C26D75 /* ECBObject.m */; };
+		FBBEE8721BEA63E600C26D75 /* ECBObjectProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE86D1BEA63E600C26D75 /* ECBObjectProtocol.h */; };
+		FBBEE8731BEA63E600C26D75 /* ECBUser.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE86E1BEA63E600C26D75 /* ECBUser.h */; };
+		FBBEE8741BEA63E600C26D75 /* ECBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE86F1BEA63E600C26D75 /* ECBUser.m */; };
+		FBBEE87B1BEA641600C26D75 /* ECBWebCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE8751BEA641600C26D75 /* ECBWebCallback.h */; };
+		FBBEE87C1BEA641600C26D75 /* ECBWebCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE8761BEA641600C26D75 /* ECBWebCallback.m */; };
+		FBBEE87D1BEA641600C26D75 /* ECBWebReponse.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE8771BEA641600C26D75 /* ECBWebReponse.h */; };
+		FBBEE87E1BEA641600C26D75 /* ECBWebReponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE8781BEA641600C26D75 /* ECBWebReponse.m */; };
+		FBBEE87F1BEA641600C26D75 /* ECBWebRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBEE8791BEA641600C26D75 /* ECBWebRequest.h */; };
+		FBBEE8801BEA641600C26D75 /* ECBWebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FBBEE87A1BEA641600C26D75 /* ECBWebRequest.m */; };
+		FBBEE8881BEA84FA00C26D75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBBEE88A1BEA84FA00C26D75 /* Localizable.strings */; };
 		FBF4FC841BE426A000ECF415 /* ECBDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = FBF4FC821BE426A000ECF415 /* ECBDevice.h */; };
 		FBF4FC851BE426A000ECF415 /* ECBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4FC831BE426A000ECF415 /* ECBDevice.m */; };
 /* End PBXBuildFile section */
@@ -54,7 +62,6 @@
 		FB01DEC31BE4070000E240E7 /* ECBToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ECBToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB01DEC61BE4070000E240E7 /* ECBToolkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECBToolkit.h; sourceTree = "<group>"; };
 		FB01DECD1BE4070000E240E7 /* ECBToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECBToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB01DED21BE4070000E240E7 /* ECBToolkitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECBToolkitTests.m; sourceTree = "<group>"; };
 		FB01DED41BE4070000E240E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB01DEDD1BE407E800E240E7 /* ECBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBConstants.h; sourceTree = "<group>"; };
 		FB01DEDE1BE407E800E240E7 /* ECBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBConstants.m; sourceTree = "<group>"; };
@@ -75,12 +82,23 @@
 		FB1CFC691BE6FD3D00792976 /* ECBWebClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBWebClient.h; sourceTree = "<group>"; };
 		FB1CFC6A1BE6FD3D00792976 /* ECBWebClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBWebClient.m; sourceTree = "<group>"; };
 		FB2BC5C51BE411CF00F3BD6B /* ECBMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECBMacros.h; sourceTree = "<group>"; };
-		FBBEE80E1BE80FDD00C26D75 /* ECBRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBRequestObject.h; sourceTree = "<group>"; };
-		FBBEE80F1BE80FDD00C26D75 /* ECBRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBRequestObject.m; sourceTree = "<group>"; };
-		FBBEE8121BE80FFA00C26D75 /* ECBResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBResponseObject.h; sourceTree = "<group>"; };
-		FBBEE8131BE80FFA00C26D75 /* ECBResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBResponseObject.m; sourceTree = "<group>"; };
-		FBBEE81E1BE81E3700C26D75 /* ECBWebCallbackObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBWebCallbackObject.h; sourceTree = "<group>"; };
-		FBBEE81F1BE81E3700C26D75 /* ECBWebCallbackObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBWebCallbackObject.m; sourceTree = "<group>"; };
+		FBBEE8621BEA63C500C26D75 /* ECBTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBTestCase.h; sourceTree = "<group>"; };
+		FBBEE8631BEA63C500C26D75 /* ECBTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBTestCase.m; sourceTree = "<group>"; };
+		FBBEE8651BEA63C500C26D75 /* ECBUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBUserTests.m; sourceTree = "<group>"; };
+		FBBEE8661BEA63C500C26D75 /* ECBWebClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBWebClientTests.m; sourceTree = "<group>"; };
+		FBBEE86B1BEA63E600C26D75 /* ECBObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBObject.h; sourceTree = "<group>"; };
+		FBBEE86C1BEA63E600C26D75 /* ECBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBObject.m; sourceTree = "<group>"; };
+		FBBEE86D1BEA63E600C26D75 /* ECBObjectProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBObjectProtocol.h; sourceTree = "<group>"; };
+		FBBEE86E1BEA63E600C26D75 /* ECBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBUser.h; sourceTree = "<group>"; };
+		FBBEE86F1BEA63E600C26D75 /* ECBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBUser.m; sourceTree = "<group>"; };
+		FBBEE8751BEA641600C26D75 /* ECBWebCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBWebCallback.h; sourceTree = "<group>"; };
+		FBBEE8761BEA641600C26D75 /* ECBWebCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBWebCallback.m; sourceTree = "<group>"; };
+		FBBEE8771BEA641600C26D75 /* ECBWebReponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBWebReponse.h; sourceTree = "<group>"; };
+		FBBEE8781BEA641600C26D75 /* ECBWebReponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBWebReponse.m; sourceTree = "<group>"; };
+		FBBEE8791BEA641600C26D75 /* ECBWebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBWebRequest.h; sourceTree = "<group>"; };
+		FBBEE87A1BEA641600C26D75 /* ECBWebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBWebRequest.m; sourceTree = "<group>"; };
+		FBBEE8891BEA84FA00C26D75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FBBEE88B1BEA854600C26D75 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FBF4FC821BE426A000ECF415 /* ECBDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBDevice.h; sourceTree = "<group>"; };
 		FBF4FC831BE426A000ECF415 /* ECBDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBDevice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,7 +178,8 @@
 		FB01DED11BE4070000E240E7 /* ECBToolkitTests */ = {
 			isa = PBXGroup;
 			children = (
-				FB01DED21BE4070000E240E7 /* ECBToolkitTests.m */,
+				FBBEE8601BEA63C500C26D75 /* Other */,
+				FBBEE8641BEA63C500C26D75 /* Unit */,
 				FB01DED41BE4070000E240E7 /* Info.plist */,
 			);
 			path = ECBToolkitTests;
@@ -200,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1CFC541BE67F2C00792976 /* ECBToolKit-iOS.plist */,
+				FBBEE88A1BEA84FA00C26D75 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -225,6 +245,7 @@
 		FB2BC5C41BE4112800F3BD6B /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				FBBEE86A1BEA63E600C26D75 /* Model */,
 				FB1CFC5A1BE69D2B00792976 /* Utils */,
 				FB1CFC481BE6710F00792976 /* HTTPRequest */,
 				FB1CFC3D1BE55CB800792976 /* Logger */,
@@ -241,12 +262,50 @@
 		FBBEE80D1BE80FD100C26D75 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FBBEE80E1BE80FDD00C26D75 /* ECBRequestObject.h */,
-				FBBEE80F1BE80FDD00C26D75 /* ECBRequestObject.m */,
-				FBBEE8121BE80FFA00C26D75 /* ECBResponseObject.h */,
-				FBBEE8131BE80FFA00C26D75 /* ECBResponseObject.m */,
-				FBBEE81E1BE81E3700C26D75 /* ECBWebCallbackObject.h */,
-				FBBEE81F1BE81E3700C26D75 /* ECBWebCallbackObject.m */,
+				FBBEE8751BEA641600C26D75 /* ECBWebCallback.h */,
+				FBBEE8761BEA641600C26D75 /* ECBWebCallback.m */,
+				FBBEE8771BEA641600C26D75 /* ECBWebReponse.h */,
+				FBBEE8781BEA641600C26D75 /* ECBWebReponse.m */,
+				FBBEE8791BEA641600C26D75 /* ECBWebRequest.h */,
+				FBBEE87A1BEA641600C26D75 /* ECBWebRequest.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBBEE8601BEA63C500C26D75 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEE8611BEA63C500C26D75 /* TestCase */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		FBBEE8611BEA63C500C26D75 /* TestCase */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEE8621BEA63C500C26D75 /* ECBTestCase.h */,
+				FBBEE8631BEA63C500C26D75 /* ECBTestCase.m */,
+			);
+			path = TestCase;
+			sourceTree = "<group>";
+		};
+		FBBEE8641BEA63C500C26D75 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEE8651BEA63C500C26D75 /* ECBUserTests.m */,
+				FBBEE8661BEA63C500C26D75 /* ECBWebClientTests.m */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		FBBEE86A1BEA63E600C26D75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBBEE86B1BEA63E600C26D75 /* ECBObject.h */,
+				FBBEE86C1BEA63E600C26D75 /* ECBObject.m */,
+				FBBEE86D1BEA63E600C26D75 /* ECBObjectProtocol.h */,
+				FBBEE86E1BEA63E600C26D75 /* ECBUser.h */,
+				FBBEE86F1BEA63E600C26D75 /* ECBUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,14 +320,17 @@
 				FB1CFC581BE67FAD00792976 /* ECBSession.h in Headers */,
 				FB01DEC71BE4070000E240E7 /* ECBToolkit.h in Headers */,
 				FB1CFC4C1BE6740E00792976 /* ECBAssert.h in Headers */,
+				FBBEE87D1BEA641600C26D75 /* ECBWebReponse.h in Headers */,
 				FB1CFC6B1BE6FD3D00792976 /* ECBWebClient.h in Headers */,
 				FBF4FC841BE426A000ECF415 /* ECBDevice.h in Headers */,
-				FBBEE8141BE80FFA00C26D75 /* ECBResponseObject.h in Headers */,
-				FBBEE8201BE81E3700C26D75 /* ECBWebCallbackObject.h in Headers */,
+				FBBEE87F1BEA641600C26D75 /* ECBWebRequest.h in Headers */,
 				FB1CFC461BE5AB0900792976 /* ECBApplication.h in Headers */,
+				FBBEE8731BEA63E600C26D75 /* ECBUser.h in Headers */,
+				FBBEE8721BEA63E600C26D75 /* ECBObjectProtocol.h in Headers */,
+				FBBEE8701BEA63E600C26D75 /* ECBObject.h in Headers */,
 				FB01DEDF1BE407E800E240E7 /* ECBConstants.h in Headers */,
 				FB1CFC4F1BE6787A00792976 /* ECBHTTPURLRequestConstructor.h in Headers */,
-				FBBEE8101BE80FDD00C26D75 /* ECBRequestObject.h in Headers */,
+				FBBEE87B1BEA641600C26D75 /* ECBWebCallback.h in Headers */,
 				FB1CFC611BE69D5200792976 /* ECBUtils.h in Headers */,
 				FB1CFC401BE55CC400792976 /* ECBLogger.h in Headers */,
 			);
@@ -341,6 +403,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				vi,
 			);
 			mainGroup = FB01DEB91BE4070000E240E7;
 			productRefGroup = FB01DEC41BE4070000E240E7 /* Products */;
@@ -358,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBBEE8881BEA84FA00C26D75 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,13 +520,15 @@
 				FB1CFC6C1BE6FD3D00792976 /* ECBWebClient.m in Sources */,
 				FB1CFC411BE55CC400792976 /* ECBLogger.m in Sources */,
 				FB1CFC621BE69D5200792976 /* ECBUtils.m in Sources */,
-				FBBEE8111BE80FDD00C26D75 /* ECBRequestObject.m in Sources */,
+				FBBEE8741BEA63E600C26D75 /* ECBUser.m in Sources */,
+				FBBEE8711BEA63E600C26D75 /* ECBObject.m in Sources */,
 				FB1CFC501BE6787A00792976 /* ECBHTTPURLRequestConstructor.m in Sources */,
+				FBBEE87E1BEA641600C26D75 /* ECBWebReponse.m in Sources */,
 				FB1CFC471BE5AB0900792976 /* ECBApplication.m in Sources */,
+				FBBEE87C1BEA641600C26D75 /* ECBWebCallback.m in Sources */,
 				FBF4FC851BE426A000ECF415 /* ECBDevice.m in Sources */,
-				FBBEE8211BE81E3700C26D75 /* ECBWebCallbackObject.m in Sources */,
 				FB01DEE01BE407E800E240E7 /* ECBConstants.m in Sources */,
-				FBBEE8151BE80FFA00C26D75 /* ECBResponseObject.m in Sources */,
+				FBBEE8801BEA641600C26D75 /* ECBWebRequest.m in Sources */,
 				FB1CFC591BE67FAD00792976 /* ECBSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,7 +537,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB01DED31BE4070000E240E7 /* ECBToolkitTests.m in Sources */,
+				FBBEE8691BEA63C500C26D75 /* ECBWebClientTests.m in Sources */,
+				FBBEE8681BEA63C500C26D75 /* ECBUserTests.m in Sources */,
+				FBBEE8671BEA63C500C26D75 /* ECBTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +552,18 @@
 			targetProxy = FB01DECF1BE4070000E240E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FBBEE88A1BEA84FA00C26D75 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBBEE8891BEA84FA00C26D75 /* en */,
+				FBBEE88B1BEA854600C26D75 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FB01DED51BE4070000E240E7 /* Debug */ = {

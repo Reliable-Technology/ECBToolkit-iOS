@@ -20,6 +20,7 @@ static NSString * const ECBHTTPRequestMethodHEAD                = @"HEAD";
 static NSString * const ECBHTTPREquestMethodDELETE              = @"DELETE";
 static NSString * const ECBHTTPRequestMethodPOST                = @"POST";
 static NSString * const ECBHTTPRequestMethodPUT                 = @"PUT";
+static NSString * const ECBHTTPRequestMethodPATCH               = @"PATCH";
 
 ///--------------------------------------
 /// @name HTTP Headers

@@ -1,23 +1,24 @@
 //
-//  ECBResponseObject.m
+//  ECBWebReponse.m
 //  ECBToolkit
 //
 //  Created by Tony Kieu on 11/2/15.
 //  Copyright © 2015 ECOMBID, INC. All rights reserved.
 //
 
-#import "ECBResponseObject.h"
+#import "ECBWebReponse.h"
 
-@interface ECBResponseObject ()
+@interface ECBWebReponse ()
 
 @property (nonatomic, strong, readwrite) id result;
 @property (nonatomic, assign, readwrite) BOOL isSuccess;
-@property (nonatomic, copy, readwrite) NSString *statusCode;
+@property (nonatomic, assign, readwrite) NSInteger headerStatusCode;
+@property (nonatomic, copy, readwrite) NSDictionary *allHeaderFields;
 @property (nonatomic, copy, readwrite) NSString *statusMessage;
 
 @end
 
-@implementation ECBResponseObject
+@implementation ECBWebReponse
 
 ///--------------------------------------
 #pragma mark - Init
@@ -25,13 +26,15 @@
 
 + (instancetype)reponseObjectWithResult:(id)result
                               isSuccess:(BOOL)isSuccess
-                             statusCode:(NSString *)statusCode
+                             statusCode:(NSInteger)statusCode
+                        allHeaderFields:(NSDictionary *)allHeaderFields
                           statusMessage:(NSString *)statusMessage
 {
-    ECBResponseObject *responseObject = [ECBResponseObject new];
+    ECBWebReponse *responseObject = [ECBWebReponse new];
     responseObject.result = result;
     responseObject.isSuccess = isSuccess;
-    responseObject.statusCode = statusCode;
+    responseObject.headerStatusCode = statusCode;
+    responseObject.allHeaderFields = allHeaderFields;
     responseObject.statusMessage = statusMessage;
     return responseObject;
 }

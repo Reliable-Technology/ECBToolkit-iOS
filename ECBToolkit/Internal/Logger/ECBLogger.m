@@ -76,7 +76,7 @@
 {
     self = [super init];
     if (self == nil) return nil;
-
+    
     _logLevel = ([ECBApplication currentApplication].appStoreEnvironment ? ECBLogLevelNone : ECBLogLevelWarning);
     
     return self;
@@ -98,7 +98,7 @@
     va_list args;
     va_start(args, format);
     
-    NSMutableString *message = [NSMutableString stringWithFormat:@"[%@]", [[self class] _descriptionForLoggingTag:level]];
+    NSMutableString *message = [NSMutableString stringWithFormat:@"[%@]", [[self class] _descriptionForLogLevel:level]];
     
     NSString *tagDescription = [[self class] _descriptionForLoggingTag:tag];
     if (tagDescription)

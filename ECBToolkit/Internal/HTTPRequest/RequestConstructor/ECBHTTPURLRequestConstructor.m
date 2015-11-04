@@ -31,8 +31,9 @@
     NSMutableDictionary *allHeaderFields = [NSMutableDictionary dictionary];
     [allHeaderFields setObject:ECBHeaderNameSessionToken forKey:[ECBSession current].sessionToken];
     [allHeaderFields setObject:ECBHeaderNameUserId forKey:@""];
+    [allHeaderFields setObject:ECBHeaderClientUniqueId forKey:@""];
     if (httpHeaders) [allHeaderFields addEntriesFromDictionary:httpHeaders];
-
+    
     request.HTTPMethod = httpMethod;
     request.allHTTPHeaderFields = allHeaderFields;
     

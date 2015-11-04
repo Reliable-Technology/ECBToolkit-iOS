@@ -10,9 +10,8 @@
 #import "ECBWebClient.h"
 #import "ECBUtils.h"
 #import "ECBAssert.h"
-#import "ECBRequestObject.h"
 #import "ECBApplication.h"
-#import "ECBHTTPURLRequestConstructor.h"
+#import "ECBLogging.h"
 
 @implementation ECBWebClient
 
@@ -30,11 +29,58 @@
 }
 
 ///--------------------------------------
+#pragma mark - Private
+///--------------------------------------
+
+- (ECBWebReponse *)_processReponse:(NSURLResponse *)response object:(id)object error:(NSError *)error
+{
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+    
+    BOOL isSuccess = YES;
+    NSInteger httpStatusCode = httpResponse.statusCode;
+    NSString *statusMessage = [NSHTTPURLResponse localizedStringForStatusCode:httpStatusCode];
+    NSDictionary *allHeaderFields = httpResponse.allHeaderFields;
+    
+    // Handles the case when the response serializer faced an unexpected response from
+    // the eComBid-API.
+    if (object == nil || error)
+    {
+        if (error)
+        {
+            statusMessage = error.localizedDescription;
+        }
+        else
+        {
+            statusMessage = NSLocalizedString(@"ECBWebResponseNoContent", @"");
+            httpStatusCode = ECBHTTPStatusCodeNOCONTENT;
+        }
+        isSuccess = NO;
+        object = @{};
+    }
+    
+    // Handles other error case.
+    if (!(httpResponse.statusCode >= ECBHTTPStatusCodeOK &&
+          httpResponse.statusCode < ECBHTTPStatusCodeMULTIPLECHOICES))
+    {
+        if (error) statusMessage = error.localizedDescription;
+        isSuccess = NO;
+    }
+    
+    ECBWebReponse *webResponse = [ECBWebReponse reponseObjectWithResult:object
+                                                              isSuccess:isSuccess
+                                                             statusCode:httpStatusCode
+                                                        allHeaderFields:allHeaderFields
+                                                          statusMessage:statusMessage];
+    return webResponse;
+    
+}
+
+///--------------------------------------
 #pragma mark - Public
 ///--------------------------------------
 
-- (void)performRequest:(ECBRequestObject *)requestObject
-              callback:(ECBWebCallbackObject *)callback
+- (void)performRequest:(ECBWebRequest *)requestObject
+              callback:(ECBWebCallback *)callback
 {
     ECBParameterAssert(requestObject, @"RequestObject can't be null");
     ECBParameterAssert(requestObject.httpPath, @"HTTP Path can't be null");
@@ -47,15 +93,19 @@
                                                                  httpMethod:requestObject.httpMethod
                                                                 httpHeaders:requestObject.additionalHeaders
                                                                  parameters:requestObject.parameters];
-
-    [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        // Parse Object Here
-    }];
+    
+    [[manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id object, NSError *error) {
+        ECBLogDebug(ECBLoggingTagCommon, @"Object: %@", object);
+        if (callback)
+        {
+            callback.result([self _processReponse:response object:object error:error]);
+        }
+    }] resume];
 }
 
-- (void)performRequest:(ECBRequestObject *)requestObject
+- (void)performRequest:(ECBWebRequest *)requestObject
                options:(ECBRequestOptions)options
-              callback:(ECBWebCallbackObject *)callback
+              callback:(ECBWebCallback *)callback
 {
     // TODO: (tkieu87) Implement later
 }

@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ECBWebRequest.h"
+#import "ECBWebReponse.h"
+#import "ECBWebCallback.h"
+#import "ECBHTTPRequest.h"
+#import "ECBHTTPURLRequestConstructor.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-@class ECBRequestObject;
-@class ECBResponseObject;
-@class ECBWebCallbackObject;
 
 typedef NS_OPTIONS(NSUInteger, ECBRequestOptions)
 {
@@ -31,12 +32,12 @@ static uint8_t const ECBRequestDefaultMaxAttemptsCount  = 5;
 
 @property (nonatomic, assign) BOOL allowSelfSignedCerts;
 
-- (void)performRequest:(ECBRequestObject *)requestObject
-              callback:(ECBWebCallbackObject *)callback;
+- (void)performRequest:(ECBWebRequest *)requestObject
+              callback:(ECBWebCallback *)callback;
 
-- (void)performRequest:(ECBRequestObject *)requestObject
+- (void)performRequest:(ECBWebRequest *)requestObject
                options:(ECBRequestOptions)options
-              callback:(ECBWebCallbackObject *)callback;
+              callback:(ECBWebCallback *)callback;
 
 @end
 

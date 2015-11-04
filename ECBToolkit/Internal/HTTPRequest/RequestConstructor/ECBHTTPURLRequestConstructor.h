@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 static NSString * const ECBHeaderNameSessionToken  = @"X-Session-Token";
 static NSString * const ECBHeaderNameUserId        = @"X-User-Id";
+static NSString * const ECBHeaderClientUniqueId    = @"X-Client-Unique-Id";
 
 @interface ECBHTTPURLRequestConstructor : NSObject
 

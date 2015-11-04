@@ -1,5 +1,5 @@
 //
-//  ECBResponseObject.h
+//  ECBWebReponse.h
 //  ECBToolkit
 //
 //  Created by Tony Kieu on 11/2/15.
@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /*!
- `ECBResponseObject` is a container object of all responses from the eComBid-API. 
+ `ECBWebReponse` is a container object of all responses from the eComBid-API.
  It encapsulates the result, and properties about the response status.
  */
-@interface ECBResponseObject : NSObject
+@interface ECBWebReponse : NSObject
 
 /*!
  @abstract Response result, can be either a NSDictionary or NSArray
@@ -27,12 +27,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) BOOL isSuccess;
 
 /*!
- @abstract Response status code
+ @abstract Header status code
  */
-@property (nullable, nonatomic, copy, readonly) NSString *statusCode;
+@property (nonatomic, assign, readonly) NSInteger headerStatusCode;
 
 /*!
- @abstract Response status message
+ @abstract Header fields
+ */
+@property (nonnull, nonatomic, copy, readonly) NSDictionary* allHeaderFields;
+
+/*!
+ @abstract Header status message
  */
 @property (nullable, nonatomic, copy, readonly) NSString *statusMessage;
 
@@ -41,18 +46,20 @@ NS_ASSUME_NONNULL_BEGIN
 ///--------------------------------------
 
 /*!
- Creates a new `ECBResponseObject` container object.
+ Creates a new `ECBWebReponse` container object.
  
- @param result          The response result object
- @param isSuccess       The flag to indicate response is success or not
- @param statusCode      The response status code
- @param statusMessage   The response status message
+ @param result          Response result object
+ @param isSuccess       Flag to indicate response is success or not
+ @param statusCode      HTTP header status code
+ @param allHeaderFields All header fields
+ @param errorMessage    Header status message
  
- @returns A new `ECBResponseObject`
+ @returns A new `ECBWebReponse`
  */
 + (instancetype)reponseObjectWithResult:(id)result
                               isSuccess:(BOOL)isSuccess
-                             statusCode:(NSString *)statusCode
+                             statusCode:(NSInteger)statusCode
+                        allHeaderFields:(NSDictionary *)allHeaderFields
                           statusMessage:(NSString *)statusMessage;
 
 @end
