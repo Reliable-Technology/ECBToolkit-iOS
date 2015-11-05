@@ -13,8 +13,8 @@
 @property (nonatomic, strong, readwrite) NSString *name;
 @property (nullable, nonatomic, strong, readwrite) NSString *objectId;
 @property (nonatomic, assign, readwrite) BOOL isActive;
-@property (nullable, nonatomic, strong, readwrite) NSDate *updatedAt;
-@property (nullable, nonatomic, strong, readwrite) NSDate *createdAt;
+@property (nullable, nonatomic, strong, readwrite) NSDate *dateModified;
+@property (nullable, nonatomic, strong, readwrite) NSDate *dateAdded;
 
 @end
 
@@ -27,10 +27,10 @@
 + (JSONKeyMapper *)_globalKeyMapper
 {
     return [[JSONKeyMapper alloc] initWithDictionary:@{@"Name": @"name",
-                                                       @"ID": @"objectId",
+                                                       @"Id": @"objectId",
                                                        @"IsActive": @"isActive",
-                                                       @"UpdatedAt": @"updatedAt",
-                                                       @"CreatedAt": @"createdAt"}];
+                                                       @"DateModified": @"dateModified",
+                                                       @"DateAdded": @"dateAdded"}];
 }
 
 ///--------------------------------------

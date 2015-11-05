@@ -10,6 +10,7 @@
 #import "ECBHTTPRequest.h"
 #import "ECBAssert.h"
 #import "ECBSession.h"
+#import "ECBDevice.h"
 
 @implementation ECBHTTPURLRequestConstructor
 
@@ -27,15 +28,16 @@
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     
+    request.HTTPMethod = httpMethod;
+    
     // TODO: (tkieu87) Define User Header Fields
     NSMutableDictionary *allHeaderFields = [NSMutableDictionary dictionary];
-    [allHeaderFields setObject:ECBHeaderNameSessionToken forKey:[ECBSession current].sessionToken];
-    [allHeaderFields setObject:ECBHeaderNameUserId forKey:@""];
-    [allHeaderFields setObject:ECBHeaderClientUniqueId forKey:@""];
+    [allHeaderFields setObject:[ECBSession current].sessionToken forKey:ECBHeaderNameSessionToken];
+    [allHeaderFields setObject:@"" forKey:ECBHeaderNameUserId];
+    [allHeaderFields setObject:[ECBDevice currentDevice].deviceUUID forKey:ECBHeaderClientUniqueId];
+    [allHeaderFields setObject:ECBHTTPURLRequestContentEncodingGZIP forKey:ECBHTTPRequestHeaderNameContentEncoding];
+    [allHeaderFields setObject:ECBHTTPURLRequestContentTypeJSON forKey:ECBHTTPRequestHeaderNameAccept];
     if (httpHeaders) [allHeaderFields addEntriesFromDictionary:httpHeaders];
-    
-    request.HTTPMethod = httpMethod;
-    request.allHTTPHeaderFields = allHeaderFields;
     
     if (parameters != nil)
     {
@@ -43,7 +45,7 @@
                              [httpMethod isEqualToString:ECBHTTPRequestMethodPUT],
                              @"Can't create %@ request with json body.", httpMethod);
         
-        [request setValue:ECBHTTPURLRequestContentTypeJSON forHTTPHeaderField:ECBHTTPRequestHeaderNameContentType];
+        [allHeaderFields setObject:ECBHTTPURLRequestContentTypeJSON forKey:ECBHTTPRequestHeaderNameContentType];
         
         NSError *error = nil;
         [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:parameters
@@ -52,6 +54,9 @@
         
         ECBConsistencyAssert(error == nil, @"Failed to serialize JSON with error = %@", error);
     }
+    
+    request.allHTTPHeaderFields = allHeaderFields;
+    
     return request;
 }
 

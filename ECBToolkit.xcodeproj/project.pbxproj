@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		4B6D13C3B342BDE17A2DD4FA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E21763144CCC77BE8BE9374 /* libPods.a */; };
 		51BCF22C7F66F152C75886FC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E21763144CCC77BE8BE9374 /* libPods.a */; };
-		FB01DEC71BE4070000E240E7 /* ECBToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB01DEC61BE4070000E240E7 /* ECBToolkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB01DECE1BE4070000E240E7 /* ECBToolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB01DEC31BE4070000E240E7 /* ECBToolkit.framework */; };
 		FB01DEDF1BE407E800E240E7 /* ECBConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = FB01DEDD1BE407E800E240E7 /* ECBConstants.h */; };
 		FB01DEE01BE407E800E240E7 /* ECBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = FB01DEDE1BE407E800E240E7 /* ECBConstants.m */; };
+		FB087D821BEA9EA300B220DD /* ECBAPIService.h in Headers */ = {isa = PBXBuildFile; fileRef = FB087D801BEA9EA300B220DD /* ECBAPIService.h */; };
+		FB087D831BEA9EA300B220DD /* ECBAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = FB087D811BEA9EA300B220DD /* ECBAPIService.m */; };
+		FB087D8A1BEA9F0100B220DD /* ECBToolkit.h in Headers */ = {isa = PBXBuildFile; fileRef = FB087D881BEA9F0100B220DD /* ECBToolkit.h */; };
+		FB087D8B1BEA9F0100B220DD /* ECBToolkit.m in Sources */ = {isa = PBXBuildFile; fileRef = FB087D891BEA9F0100B220DD /* ECBToolkit.m */; };
+		FB087D901BEAA74F00B220DD /* ECBAPIServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB087D8F1BEAA74F00B220DD /* ECBAPIServiceTests.m */; };
 		FB1CFC401BE55CC400792976 /* ECBLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = FB1CFC3E1BE55CC400792976 /* ECBLogger.h */; };
 		FB1CFC411BE55CC400792976 /* ECBLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1CFC3F1BE55CC400792976 /* ECBLogger.m */; };
 		FB1CFC461BE5AB0900792976 /* ECBApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = FB1CFC441BE5AB0900792976 /* ECBApplication.h */; };
@@ -43,6 +47,8 @@
 		FBBEE8881BEA84FA00C26D75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FBBEE88A1BEA84FA00C26D75 /* Localizable.strings */; };
 		FBF4FC841BE426A000ECF415 /* ECBDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = FBF4FC821BE426A000ECF415 /* ECBDevice.h */; };
 		FBF4FC851BE426A000ECF415 /* ECBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF4FC831BE426A000ECF415 /* ECBDevice.m */; };
+		FBFC85ED1BEBAD6000FAA006 /* ECBURLManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FBFC85EB1BEBAD6000FAA006 /* ECBURLManager.h */; };
+		FBFC85EE1BEBAD6000FAA006 /* ECBURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFC85EC1BEBAD6000FAA006 /* ECBURLManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +66,15 @@
 		6AD5C7441CB0EAC2F722C5A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		85456BB0EE1D28B63C9C15BB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FB01DEC31BE4070000E240E7 /* ECBToolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ECBToolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB01DEC61BE4070000E240E7 /* ECBToolkit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECBToolkit.h; sourceTree = "<group>"; };
 		FB01DECD1BE4070000E240E7 /* ECBToolkitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECBToolkitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB01DED41BE4070000E240E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB01DEDD1BE407E800E240E7 /* ECBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBConstants.h; sourceTree = "<group>"; };
 		FB01DEDE1BE407E800E240E7 /* ECBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBConstants.m; sourceTree = "<group>"; };
+		FB087D801BEA9EA300B220DD /* ECBAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBAPIService.h; sourceTree = "<group>"; };
+		FB087D811BEA9EA300B220DD /* ECBAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBAPIService.m; sourceTree = "<group>"; };
+		FB087D881BEA9F0100B220DD /* ECBToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBToolkit.h; sourceTree = "<group>"; };
+		FB087D891BEA9F0100B220DD /* ECBToolkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBToolkit.m; sourceTree = "<group>"; };
+		FB087D8F1BEAA74F00B220DD /* ECBAPIServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBAPIServiceTests.m; sourceTree = "<group>"; };
 		FB1CFC3E1BE55CC400792976 /* ECBLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBLogger.h; sourceTree = "<group>"; };
 		FB1CFC3F1BE55CC400792976 /* ECBLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBLogger.m; sourceTree = "<group>"; };
 		FB1CFC421BE55CCD00792976 /* ECBLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECBLogging.h; sourceTree = "<group>"; };
@@ -101,6 +111,8 @@
 		FBBEE88B1BEA854600C26D75 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FBF4FC821BE426A000ECF415 /* ECBDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBDevice.h; sourceTree = "<group>"; };
 		FBF4FC831BE426A000ECF415 /* ECBDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBDevice.m; sourceTree = "<group>"; };
+		FBFC85EB1BEBAD6000FAA006 /* ECBURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECBURLManager.h; sourceTree = "<group>"; };
+		FBFC85EC1BEBAD6000FAA006 /* ECBURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECBURLManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,11 +178,16 @@
 			children = (
 				FB1CFC511BE67EDE00792976 /* Resources */,
 				FB2BC5C41BE4112800F3BD6B /* Internal */,
-				FB01DEC61BE4070000E240E7 /* ECBToolkit.h */,
 				FB01DEDD1BE407E800E240E7 /* ECBConstants.h */,
 				FB01DEDE1BE407E800E240E7 /* ECBConstants.m */,
 				FB1CFC561BE67FAD00792976 /* ECBSession.h */,
 				FB1CFC571BE67FAD00792976 /* ECBSession.m */,
+				FB087D801BEA9EA300B220DD /* ECBAPIService.h */,
+				FB087D811BEA9EA300B220DD /* ECBAPIService.m */,
+				FB087D881BEA9F0100B220DD /* ECBToolkit.h */,
+				FB087D891BEA9F0100B220DD /* ECBToolkit.m */,
+				FBFC85EB1BEBAD6000FAA006 /* ECBURLManager.h */,
+				FBFC85EC1BEBAD6000FAA006 /* ECBURLManager.m */,
 			);
 			path = ECBToolkit;
 			sourceTree = "<group>";
@@ -294,6 +311,7 @@
 			children = (
 				FBBEE8651BEA63C500C26D75 /* ECBUserTests.m */,
 				FBBEE8661BEA63C500C26D75 /* ECBWebClientTests.m */,
+				FB087D8F1BEAA74F00B220DD /* ECBAPIServiceTests.m */,
 			);
 			path = Unit;
 			sourceTree = "<group>";
@@ -318,11 +336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB1CFC581BE67FAD00792976 /* ECBSession.h in Headers */,
-				FB01DEC71BE4070000E240E7 /* ECBToolkit.h in Headers */,
 				FB1CFC4C1BE6740E00792976 /* ECBAssert.h in Headers */,
 				FBBEE87D1BEA641600C26D75 /* ECBWebReponse.h in Headers */,
 				FB1CFC6B1BE6FD3D00792976 /* ECBWebClient.h in Headers */,
 				FBF4FC841BE426A000ECF415 /* ECBDevice.h in Headers */,
+				FBFC85ED1BEBAD6000FAA006 /* ECBURLManager.h in Headers */,
 				FBBEE87F1BEA641600C26D75 /* ECBWebRequest.h in Headers */,
 				FB1CFC461BE5AB0900792976 /* ECBApplication.h in Headers */,
 				FBBEE8731BEA63E600C26D75 /* ECBUser.h in Headers */,
@@ -330,6 +348,8 @@
 				FBBEE8701BEA63E600C26D75 /* ECBObject.h in Headers */,
 				FB01DEDF1BE407E800E240E7 /* ECBConstants.h in Headers */,
 				FB1CFC4F1BE6787A00792976 /* ECBHTTPURLRequestConstructor.h in Headers */,
+				FB087D821BEA9EA300B220DD /* ECBAPIService.h in Headers */,
+				FB087D8A1BEA9F0100B220DD /* ECBToolkit.h in Headers */,
 				FBBEE87B1BEA641600C26D75 /* ECBWebCallback.h in Headers */,
 				FB1CFC611BE69D5200792976 /* ECBUtils.h in Headers */,
 				FB1CFC401BE55CC400792976 /* ECBLogger.h in Headers */,
@@ -519,13 +539,16 @@
 			files = (
 				FB1CFC6C1BE6FD3D00792976 /* ECBWebClient.m in Sources */,
 				FB1CFC411BE55CC400792976 /* ECBLogger.m in Sources */,
+				FBFC85EE1BEBAD6000FAA006 /* ECBURLManager.m in Sources */,
 				FB1CFC621BE69D5200792976 /* ECBUtils.m in Sources */,
+				FB087D831BEA9EA300B220DD /* ECBAPIService.m in Sources */,
 				FBBEE8741BEA63E600C26D75 /* ECBUser.m in Sources */,
 				FBBEE8711BEA63E600C26D75 /* ECBObject.m in Sources */,
 				FB1CFC501BE6787A00792976 /* ECBHTTPURLRequestConstructor.m in Sources */,
 				FBBEE87E1BEA641600C26D75 /* ECBWebReponse.m in Sources */,
 				FB1CFC471BE5AB0900792976 /* ECBApplication.m in Sources */,
 				FBBEE87C1BEA641600C26D75 /* ECBWebCallback.m in Sources */,
+				FB087D8B1BEA9F0100B220DD /* ECBToolkit.m in Sources */,
 				FBF4FC851BE426A000ECF415 /* ECBDevice.m in Sources */,
 				FB01DEE01BE407E800E240E7 /* ECBConstants.m in Sources */,
 				FBBEE8801BEA641600C26D75 /* ECBWebRequest.m in Sources */,
@@ -540,6 +563,7 @@
 				FBBEE8691BEA63C500C26D75 /* ECBWebClientTests.m in Sources */,
 				FBBEE8681BEA63C500C26D75 /* ECBUserTests.m in Sources */,
 				FBBEE8671BEA63C500C26D75 /* ECBTestCase.m in Sources */,
+				FB087D901BEAA74F00B220DD /* ECBAPIServiceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

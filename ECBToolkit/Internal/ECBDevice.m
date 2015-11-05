@@ -71,6 +71,12 @@ static NSString *DeviceSysctlByName(NSString *name)
     return DeviceSysctlByName(@"kern.osversion");
 }
 
+- (NSString *)deviceUUID
+{
+    NSString *uuid = [UIDevice currentDevice].identifierForVendor.UUIDString;
+    return uuid;
+}
+
 - (BOOL)isJailBroken
 {
     BOOL jailBroken = NO;

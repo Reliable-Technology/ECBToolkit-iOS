@@ -14,6 +14,7 @@
 @property (nonatomic, copy, readonly) NSString *osFullVersion;
 @property (nonatomic, copy, readonly) NSString *osVersion;
 @property (nonatomic, copy, readonly) NSString *osBuild;
+@property (nonatomic, copy, readonly) NSString *deviceUUID;
 
 @property (nonatomic, assign, readonly, getter=isJailBroken) BOOL jailBroken;
 

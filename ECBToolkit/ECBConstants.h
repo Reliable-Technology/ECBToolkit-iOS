@@ -128,11 +128,12 @@ typedef NS_ENUM(NSInteger, ECBErrorCode)
 /// @name Blocks
 ///--------------------------------------
 
+typedef void (^ECBErrorResultBlock)(NSInteger statusCode, NSString *__nullable statusMessage);
 typedef void (^ECBBooleanResultBlock)(BOOL succeeded, NSError *__nullable error);
 typedef void (^ECBIntegerResultBlock)(int number, NSError *__nullable error);
 typedef void (^ECBArrayResultBlock)(NSArray *__nullable objects, NSError *__nullable error);
 typedef void (^ECBObjectResultBlock)(ECBObject *__nullable objects, NSError *__nullable error);
-typedef void (^ECBUserResultBlock)(ECBUser *__nullable user, NSError *__nullable error);
+typedef void (^ECBUserResultBlock)(ECBUser *__nullable user);
 typedef void (^ECBDataResultBlock)(NSData *__nullable data, NSError *__nullable error);
 typedef void (^ECBDataStreamResultBlock)(NSInputStream *__nullable stream, NSError *__nullable error);
 typedef void (^ECBFilePathResultBlock)(NSString *__nullable filePath, NSError *__nullable error);

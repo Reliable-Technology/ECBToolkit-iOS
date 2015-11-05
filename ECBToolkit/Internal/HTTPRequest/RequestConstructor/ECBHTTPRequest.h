@@ -28,7 +28,10 @@ static NSString * const ECBHTTPRequestMethodPATCH               = @"PATCH";
 
 static NSString * const ECBHTTPRequestHeaderNameContentType     = @"Content-Type";
 static NSString * const ECBHTTPRequestHeaderNameContentLength   = @"Content-Length";
+static NSString * const ECBHTTPRequestHeaderNameContentEncoding = @"Content-Encoding";
+static NSString * const ECBHTTPRequestHeaderNameAccept          = @"Accept";
 
+static NSString * const ECBHTTPURLRequestContentEncodingGZIP    = @"gzip";
 static NSString * const ECBHTTPURLRequestContentTypeJSON        = @"application/json; charset=utf-8";
 static NSString * const ECBHTTPURLRequestContentTypeXML         = @"application/xml; charset=utf-8";
 static NSString * const ECBHTTPURLRequestContentTypeOctetStream = @"binary/octet-stream";

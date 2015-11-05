@@ -23,7 +23,7 @@
 {
     if ((self = [super init]))
     {
-        _allowSelfSignedCerts = ![ECBApplication currentApplication].isAppStoreEnvironment;
+        _allowInvalidCertificates = ![ECBApplication currentApplication].isAppStoreEnvironment;
     }
     return self;
 }
@@ -87,7 +87,7 @@
     ECBParameterAssert(requestObject.httpMethod, @"HTTP Method can't be null");
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.securityPolicy.allowInvalidCertificates = self.allowSelfSignedCerts;
+    manager.securityPolicy.allowInvalidCertificates = self.allowInvalidCertificates;
     
     NSURLRequest *request = [ECBHTTPURLRequestConstructor urlRequestWithURL:requestObject.httpPath
                                                                  httpMethod:requestObject.httpMethod

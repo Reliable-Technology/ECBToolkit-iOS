@@ -30,7 +30,7 @@ static uint8_t const ECBRequestDefaultMaxAttemptsCount  = 5;
 
 @interface ECBWebClient : NSObject
 
-@property (nonatomic, assign) BOOL allowSelfSignedCerts;
+@property (nonatomic, assign) BOOL allowInvalidCertificates;
 
 - (void)performRequest:(ECBWebRequest *)requestObject
               callback:(ECBWebCallback *)callback;

@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  @abstract Header fields
  */
-@property (nonnull, nonatomic, copy, readonly) NSDictionary* allHeaderFields;
+@property (nonnull, nonatomic, copy, readonly) NSDictionary *allHeaderFields;
 
 /*!
  @abstract Header status message
