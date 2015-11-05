@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
 
   s.source_files        = 'ECBToolkit/*.{h,m}',
                           'ECBToolkit/Internal/**/*.{h,m}'
+  s.public_header_files = 'ECBToolkit/ECBToolkit.h'
   #s.resources           = 'ECBToolkit/Resources/*'
 
   s.ios.frameworks      = 'AudioToolbox',
@@ -35,7 +36,7 @@ Pod::Spec.new do |s|
   s.ios.weak_frameworks = 'Accounts',
                           'Social'
 
-  s.dependency 'AFNetworking'
-  s.dependency 'OCMock'
-
+  s.dependency 'AFNetworking', '~> 3.0.0-beta.1'
+  s.dependency 'OCMock', '~> 3.2'
+  s.dependency 'JSONModel', '~> 1.1.2'
 end
