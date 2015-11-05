@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.source_files        = 'ECBToolkit/*.{h,m}',
                           'ECBToolkit/Internal/**/*.{h,m}'
-  s.public_header_files = 'ECBToolkit/ECBToolkit.h'
+  #s.public_header_files = 'ECBToolkit/ECBToolkit.h'
   #s.resources           = 'ECBToolkit/Resources/*'
 
   s.ios.frameworks      = 'AudioToolbox',
