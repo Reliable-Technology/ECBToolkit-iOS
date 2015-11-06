@@ -31,8 +31,11 @@ ECBLog(ECBLogLevelInfo, (tag), (frmt), ##__VA_ARGS__)
 ECBLog(ECBLogLevelDebug, (tag), (frmt), ##__VA_ARGS__)
 
 #define ECBLogException(exception) \
-ECBLogError(ECBLoggingTagCommon, @"Caught \"%@\" with reason \"%@\"$@", \
+ECBLogError(ECBLoggingTagCrashReporting, @"Caught \"%@\" with reason \"%@\"$@", \
 exception.name, exception, \
 [exception callStackSymbols] ? [NSString stringWithFormat:@":\n%@.", [exception callStackSymbols]] : @"")
+
+#define ECBLogTraceHere \
+ECBLogInfo(ECBLoggingTagCommon, @"%s\n", __PRETTY_FUNCTION__)
 
 #endif /* ECBLogging_h */

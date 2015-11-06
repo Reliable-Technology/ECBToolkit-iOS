@@ -23,6 +23,8 @@ static NSString * const ECBHeaderClientUniqueId    = @"X-Client-Unique-Id";
  @param httpMethod  HTTP method
  @param httpHeaders HTTP header parameters
  @param parameters  HTTP body parameters
+ 
+ @returns A `NSMutableURLRequest`
  */
 + (NSMutableURLRequest *)urlRequestWithURL:(nonnull NSString *)url
                                 httpMethod:(nonnull NSString *)httpMethod
