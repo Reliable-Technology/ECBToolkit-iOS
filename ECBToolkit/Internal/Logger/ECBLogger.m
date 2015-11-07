@@ -77,7 +77,7 @@
     self = [super init];
     if (self == nil) return nil;
     
-    _logLevel = ([ECBApplication currentApplication].appStoreEnvironment ? ECBLogLevelNone : ECBLogLevelWarning);
+    _logLevel = ([ECBApplication currentApplication].appStoreEnvironment ? ECBLogLevelNone : ECBLogLevelDebug);
     
     return self;
 }
